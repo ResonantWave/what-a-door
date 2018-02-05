@@ -3,6 +3,7 @@ Small domotic Telegram bot. Includes:
 * Street door opener through a relay in the entryphone
 * Peephole camera
 * Temperature and humidity sensor
+* Magnetic door sensor
 
 ### Libraries
 This bot is intended to be run in a Raspberry Pi. Required libreries are:
@@ -11,9 +12,9 @@ This bot is intended to be run in a Raspberry Pi. Required libreries are:
 * PIL
 
 ### Running
-You'll need a Telegram api key. Please obtain it via @botfather, and then paste it into [line 16 of door.py](door.py)
+You'll need a Telegram api key. Please obtain it via `@botfather`, and then paste it into [line 16 of door.py](door.py)
 
-Then, you'll also need to authorize your Telegram account, setting your user id in [line 28 of the same file](door.py). To find it you can use the /start command. The number after the __Please choose an action.__ is your user id.
+Then, you'll also need to authorize your Telegram account, setting your user id in [line 28 of the same file](door.py). To find it you can use the `/start` command. The number after the `Please choose an action.` is your user id.
 
 Also, connect the following hardware to your Raspberry Pi:
 * Relay to BCM Pin 18
