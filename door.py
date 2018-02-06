@@ -75,8 +75,8 @@ def take_pic(m):
 
    if(m.chat.id in allowed_numbers):
       door.send_chat_action(m.chat.id, 'upload_photo')
-      os.system('raspistill -o /root/pic.jpg -t 1')
-      toCrop = Image.open('/root/pic.jpg')
+      os.system('raspistill -o /home/pi/pic.jpg -t 1')
+      toCrop = Image.open('/home/pi/pic.jpg')
 
       half_the_width = toCrop.size[0] / 2
       half_the_height = toCrop.size[1] / 2
@@ -86,9 +86,9 @@ def take_pic(m):
           half_the_width + 300,
           half_the_height + 640)
       )
-      img.save('/root/picCrop.jpg')
+      img.save('/home/pi/picCrop.jpg')
 
-      photo = open('/root/picCrop.jpg', 'rb')
+      photo = open('/home/pi/picCrop.jpg', 'rb')
       door.send_photo(m.chat.id, photo)
       photo.close()
 
